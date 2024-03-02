@@ -1,0 +1,33 @@
+{
+  "name": "openedu",
+  "version": "1.0.0",
+  "description": "Free open source learning platform powered by ai",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "yarn install && concurrently \"cd server-openedu && yarn install && yarn prisma:dev:deploy \" \" cd ../webclient-openedu && yarn install\"",
+    "dev": "concurrently \"cd server-openedu && yarn start:dev\" \"cd webclient-openedu && yarn dev\"",
+    "build": "concurrently \"cd server-openedu && yarn build\" \"cd webclient-openedu && yarn build\"",
+    "start": "concurrently \"cd server-openedu && yarn start\" \"cd webclient-openedu && yarn start\"",
+    "git:pre-commit": "concurrently \"cd server-openedu && yarn git:pre-commit\" \"cd webclient-openedu && yarn git:pre-commit\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synthAI-Labs/openedu.git"
+  },
+  "keywords": [
+    "OpenEdu",
+    "Free",
+    "learning",
+    "open",
+    "source"
+  ],
+  "author": "Himasnhu-at <github>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/synthAI-Labs/openedu/issues"
+  },
+  "homepage": "https://github.com/synthAI-Labs/openedu#readme"
+}
