@@ -1,0 +1,6 @@
+[submodule "WebClient-OpenEdu"]
+	path = WebClient-OpenEdu
+	url = https://github.com/synthAI-Labs/WebClient-OpenEdu.git
+[submodule "server-OpenEdu"]
+	path = server-OpenEdu
+	url = https://github.com/synthAI-Labs/server-OpenEdu.git
